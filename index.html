@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>秋の感謝祭×ハロウィンイベント｜オアシスタウン吹田SST</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FBF3E6;
+    --cream-deep:#F3E6D2;
+    --ink:#241A14;
+    --pumpkin:#E4661F;
+    --pumpkin-deep:#C24E12;
+    --teal:#1F4A43;
+    --plum:#5C3160;
+    --marigold:#F2B33D;
+    --paper:#FFFDF9;
+    --line: rgba(36,26,20,0.14);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Zen Kaku Gothic New', sans-serif;
+    line-height:1.8;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    overflow:hidden;
+    background:linear-gradient(160deg,var(--pumpkin) 0%, var(--pumpkin-deep) 46%, var(--plum) 100%);
+    color:var(--cream);
+    padding:76px 24px 96px;
+  }
+  .hero-decor{position:absolute;inset:0;pointer-events:none;opacity:0.9;}
+  .hero-inner{position:relative;max-width:880px;margin:0 auto;text-align:center;}
+  .eyebrow-badge{
+    display:inline-flex;align-items:center;gap:8px;
+    background:rgba(255,255,255,0.14);
+    border:1px solid rgba(255,255,255,0.35);
+    padding:8px 18px;border-radius:999px;
+    font-size:14px;letter-spacing:0.04em;
+    margin-bottom:28px;
+  }
+  .hero h1{
+    font-family:'Kiwi Maru', serif;
+    font-weight:500;
+    font-size:clamp(34px,6vw,58px);
+    line-height:1.35;
+    margin:0 0 14px;
+    text-shadow:0 3px 0 rgba(0,0,0,0.08);
+  }
+  .hero h1 span{display:block;}
+  .hero p.lede{
+    font-size:clamp(15px,2vw,18px);
+    max-width:560px;
+    margin:0 auto 36px;
+    color:rgba(255,253,249,0.92);
+  }
+  .hero-facts{
+    display:flex;flex-wrap:wrap;justify-content:center;gap:14px;
+  }
+  .fact-pill{
+    background:var(--paper);
+    color:var(--ink);
+    border-radius:16px;
+    padding:14px 22px;
+    text-align:left;
+    min-width:200px;
+    box-shadow:0 10px 24px rgba(46,20,10,0.18);
+  }
+  .fact-pill .k{
+    font-size:12px;color:var(--pumpkin-deep);font-weight:700;
+    letter-spacing:0.05em;margin-bottom:4px;
+  }
+  .fact-pill .v{font-size:15px;font-weight:700;}
+  .fact-pill .v small{display:block;font-weight:400;font-size:13px;color:#6b5b4d;margin-top:2px;}
+
+  /* ---------- INFO STRIP ---------- */
+  .info{
+    background:var(--paper);
+    margin:-56px auto 0;
+    max-width:1000px;
+    border-radius:24px;
+    box-shadow:0 18px 40px rgba(46,20,10,0.12);
+    position:relative;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    overflow:hidden;
+  }
+  .info-cell{
+    padding:32px 28px;
+    border-right:1px solid var(--line);
+  }
+  .info-cell:last-child{border-right:none;}
+  .info-cell h3{
+    font-family:'Kiwi Maru', serif;
+    font-weight:500;
+    font-size:17px;
+    margin:0 0 10px;
+    color:var(--teal);
+  }
+  .info-cell p{margin:0;font-size:14.5px;color:#463A31;}
+  .info-cell a.map-link{
+    display:inline-block;margin-top:10px;font-size:14px;font-weight:700;
+    color:var(--pumpkin-deep);text-decoration:none;border-bottom:1.5px solid var(--pumpkin-deep);
+    padding-bottom:1px;
+  }
+  .rain-note{
+    display:inline-block;margin-top:8px;font-size:12.5px;color:var(--plum);
+    background:#F4E9F6;padding:3px 10px;border-radius:999px;
+  }
+
+  /* ---------- SECTION HEADERS ---------- */
+  section{padding:96px 0 0;}
+  .sec-head{max-width:640px;margin:0 auto 48px;text-align:center;}
+  .sec-head h2{
+    font-family:'Kiwi Maru', serif;
+    font-weight:500;
+    font-size:clamp(26px,4vw,36px);
+    margin:0 0 12px;
+    color:var(--ink);
+  }
+  .sec-head p{margin:0;color:#5a4c40;font-size:15px;}
+
+  /* ---------- TIMETABLE ---------- */
+  .tt-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:28px;
+    max-width:960px;
+    margin:0 auto;
+  }
+  .tt-day{
+    background:var(--paper);
+    border-radius:20px;
+    padding:8px 0 20px;
+    box-shadow:0 8px 22px rgba(46,20,10,0.07);
+    border:1px solid var(--line);
+  }
+  .tt-day-head{
+    display:flex;align-items:baseline;gap:10px;
+    padding:22px 26px 18px;
+    border-bottom:1px solid var(--line);
+  }
+  .tt-day-head .dow{
+    font-family:'Kiwi Maru',serif;font-weight:500;
+    font-size:22px;
+  }
+  .tt-day.sat .tt-day-head{color:var(--teal);}
+  .tt-day.sun .tt-day-head{color:var(--pumpkin-deep);}
+  .tt-day-head .date-sub{font-size:13px;color:#8a7a6a;}
+  .tt-list{list-style:none;margin:0;padding:10px 14px 0;}
+  .tt-list li{
+    display:grid;
+    grid-template-columns:64px 1fr;
+    gap:14px;
+    align-items:center;
+    padding:11px 12px;
+    border-radius:12px;
+  }
+  .tt-list li.linked{cursor:pointer;}
+  .tt-list li.linked:hover{background:var(--cream-deep);}
+  .tt-time{
+    font-weight:700;font-size:14px;color:var(--pumpkin-deep);
+    font-variant-numeric:tabular-nums;
+  }
+  .tt-day.sun .tt-time{color:var(--plum);}
+  .tt-name{font-size:15px;font-weight:500;}
+  .tt-name a{text-decoration:none;font-weight:700;color:var(--ink);border-bottom:1.5px dotted var(--ink);}
+  .tt-tag{
+    display:inline-block;font-size:11px;margin-left:6px;
+    color:#8a7a6a;font-weight:400;
+  }
+
+  /* ---------- PERFORMERS ---------- */
+  .performers{background:var(--paper);margin-top:96px;padding:96px 0 100px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .perf-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:36px 28px;
+    max-width:1080px;margin:0 auto;
+  }
+  .perf-card{scroll-margin-top:28px;}
+  .perf-photo{
+    aspect-ratio:4/5;
+    width:100%;
+    overflow:hidden;
+    border-radius:18px;
+    margin-bottom:16px;
+    background:var(--cream-deep);
+  }
+  .perf-photo img{width:100%;height:100%;object-fit:cover;object-position:center 18%;}
+  .perf-card h3{
+    font-family:'Kiwi Maru',serif;font-weight:500;
+    font-size:19px;margin:0 0 4px;
+  }
+  .perf-days{font-size:12px;color:var(--pumpkin-deep);font-weight:700;margin-bottom:10px;letter-spacing:0.02em;}
+  .perf-card p{font-size:14px;color:#4a3d32;margin:0;}
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    background:var(--teal);
+    color:var(--cream);
+    padding:64px 24px 40px;
+    margin-top:0;
+  }
+  .foot-inner{max-width:760px;margin:0 auto;text-align:center;}
+  footer h2{
+    font-family:'Kiwi Maru',serif;font-weight:500;
+    font-size:22px;margin:0 0 14px;
+  }
+  footer .addr{font-size:14.5px;color:rgba(251,243,230,0.88);margin:0 0 20px;}
+  footer .btn{
+    display:inline-block;background:var(--pumpkin);color:#fff;
+    padding:12px 28px;border-radius:999px;text-decoration:none;
+    font-weight:700;font-size:14px;
+  }
+  footer .fine{margin-top:32px;font-size:12.5px;color:rgba(251,243,230,0.6);}
+
+  @media (max-width:760px){
+    .info{grid-template-columns:1fr;margin:-40px 16px 0;}
+    .info-cell{border-right:none;border-bottom:1px solid var(--line);}
+    .info-cell:last-child{border-bottom:none;}
+    .tt-grid{grid-template-columns:1fr;}
+    .perf-grid{grid-template-columns:repeat(2,1fr);}
+    section{padding:72px 0 0;}
+    .performers{padding:72px 0 76px;}
+  }
+  @media (max-width:460px){
+    .perf-grid{grid-template-columns:1fr 1fr;gap:22px 16px;}
+    .hero{padding:64px 18px 84px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <svg class="hero-decor" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="90" cy="80" r="120" fill="rgba(255,255,255,0.06)"/>
+    <circle cx="1120" cy="430" r="180" fill="rgba(255,255,255,0.06)"/>
+    <path d="M60 420 C 90 380, 140 380, 150 430 C 160 470, 110 480, 80 460 C 50 445, 40 430, 60 420 Z" fill="rgba(255,255,255,0.10)"/>
+    <path d="M1000 40 C 1030 10, 1080 20, 1080 60 C 1080 95, 1030 100, 1005 80 C 985 65, 985 55, 1000 40 Z" fill="rgba(255,255,255,0.10)"/>
+    <g opacity="0.16">
+      <path d="M600 70 Q615 40 640 45 Q660 20 685 40 Q705 30 715 55 Q730 60 725 80 Q735 100 715 110 Q705 130 680 122 Q660 138 640 120 Q615 125 610 100 Q590 92 600 70 Z" fill="#fff"/>
+      <rect x="655" y="18" width="8" height="22" rx="4" fill="#fff"/>
+    </g>
+  </svg>
+  <div class="hero-inner">
+    <span class="eyebrow-badge">オアシスタウン吹田SST「SST公園」</span>
+    <h1><span>秋の感謝祭</span><span>× ハロウィンイベント</span></h1>
+    <p class="lede">子供向けのワークショップとステージで、2日間にわたり秋の実りとハロウィンを楽しむ地域イベントです。</p>
+    <div class="hero-facts">
+      <div class="fact-pill">
+        <div class="k">開催日時</div>
+        <div class="v">10/17（土）・18（日）<small>各日 10:00〜16:00　雨天中止</small></div>
+      </div>
+      <div class="fact-pill">
+        <div class="k">開催場所</div>
+        <div class="v">SST公園<small>大阪府吹田市岸部中5-1-1</small></div>
+      </div>
+      <div class="fact-pill">
+        <div class="k">内容</div>
+        <div class="v">ワークショップ ＆ ステージ<small>子供向け企画を多数開催</small></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="info">
+  <div class="info-cell">
+    <h3>開催日時</h3>
+    <p>10月17日（土）・18日（日）<br>各日 10:00〜16:00</p>
+    <span class="rain-note">雨天中止</span>
+  </div>
+  <div class="info-cell">
+    <h3>開催場所</h3>
+    <p>オアシスタウン吹田SST「SST公園」<br>大阪府吹田市岸部中5-1-1</p>
+    <a class="map-link" href="https://maps.app.goo.gl/5A4ka39Bmah164q2A" target="_blank" rel="noopener">Googleマップで見る →</a>
+  </div>
+  <div class="info-cell">
+    <h3>内容</h3>
+    <p>子供向けのワークショップに加え、タヒチアンダンスやフラ、アイドル、歌謡ユニットなど盛りだくさんのステージをお届けします。</p>
+  </div>
+</div>
+
+<section id="timetable">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>ステージ タイムテーブル</h2>
+      <p>気になる出演者をタップすると、プロフィールへジャンプします。</p>
+    </div>
+    <div class="tt-grid">
+
+      <div class="tt-day sat">
+        <div class="tt-day-head">
+          <span class="dow">10/17（土）</span>
+          <span class="date-sub">SST公園ステージ</span>
+        </div>
+        <ul class="tt-list">
+          <li><span class="tt-time">11:00</span><span class="tt-name">すいたん</span></li>
+          <li class="linked"><span class="tt-time">11:30</span><span class="tt-name"><a href="#au-ori-tahiti">Au ori tahiti</a></span></li>
+          <li class="linked"><span class="tt-time">12:30</span><span class="tt-name"><a href="#unity">Unity</a></span></li>
+          <li class="linked"><span class="tt-time">12:50</span><span class="tt-name"><a href="#mikeneko">ミケネコガールズ</a></span></li>
+          <li><span class="tt-time">13:30</span><span class="tt-name">すいたん</span></li>
+          <li class="linked"><span class="tt-time">14:00</span><span class="tt-name"><a href="#nakai-yuzuki">中井優月</a></span></li>
+          <li class="linked"><span class="tt-time">15:00</span><span class="tt-name"><a href="#saoi-mariko">佐合井マリ子</a></span></li>
+        </ul>
+      </div>
+
+      <div class="tt-day sun">
+        <div class="tt-day-head">
+          <span class="dow">10/18（日）</span>
+          <span class="date-sub">SST公園ステージ</span>
+        </div>
+        <ul class="tt-list">
+          <li><span class="tt-time">11:00</span><span class="tt-name">すいたん</span></li>
+          <li class="linked"><span class="tt-time">11:30</span><span class="tt-name"><a href="#parco-honico">サークルPARCO＆honico</a></span></li>
+          <li class="linked"><span class="tt-time">12:00</span><span class="tt-name"><a href="#teora-hani-tahiti">テオラハニタヒチ</a></span></li>
+          <li><span class="tt-time">12:30</span><span class="tt-name">すいたん</span></li>
+          <li class="linked"><span class="tt-time">13:00</span><span class="tt-name"><a href="#kuma-to-usagi">くまとうさぎ</a></span></li>
+          <li class="linked"><span class="tt-time">14:00</span><span class="tt-name"><a href="#rubino">Rubino</a></span></li>
+          <li><span class="tt-time">15:00</span><span class="tt-name">ビンゴ大会</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="performers" id="performers">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>出演者プロフィール</h2>
+      <p>両日で活躍する多彩な出演者をご紹介します。</p>
+    </div>
+    <div class="perf-grid">
+
+      <div class="perf-card" id="au-ori-tahiti">
+        <div class="perf-photo"><img src="images/au-ori-tahiti.jpg" alt="Au ori tahiti"></div>
+        <h3>Au ori tahiti</h3>
+        <div class="perf-days">10/17（土）11:30〜</div>
+        <p>奈良を拠点とするタヒチアンダンス教室。情熱的な打楽器のリズムと優雅な踊りで、南国タヒチの伝統と明るいエネルギーを届けます。</p>
+      </div>
+
+      <div class="perf-card" id="unity">
+        <div class="perf-photo"><img src="images/unity.jpg" alt="Unity"></div>
+        <h3>Unity</h3>
+        <div class="perf-days">10/17（土）12:30〜</div>
+        <p>関西を中心に活動するアイドルグループ。メンバーの強い結束力とキャッチーなパフォーマンスで、会場全体をひとつに盛り上げます。</p>
+      </div>
+
+      <div class="perf-card" id="mikeneko">
+        <div class="perf-photo"><img src="images/mikeneko-girls.jpg" alt="ミケネコガールズ"></div>
+        <h3>ミケネコガールズ</h3>
+        <div class="perf-days">10/17（土）12:50〜</div>
+        <p>関西発の個性派アイドルグループ。親しみやすいキャラクターとエネルギッシュなステージで、観客を笑顔にするライブを展開します。</p>
+      </div>
+
+      <div class="perf-card" id="nakai-yuzuki">
+        <div class="perf-photo"><img src="images/nakai-yuzuki.jpg" alt="中井優月"></div>
+        <h3>中井優月</h3>
+        <div class="perf-days">10/17（土）14:00〜</div>
+        <p>和歌山市観光発信人。アイドルグループでの活動を経てソロへ転向し、透明感ある歌声で会場を魅了します。</p>
+      </div>
+
+      <div class="perf-card" id="saoi-mariko">
+        <div class="perf-photo"><img src="images/saoi-mariko.jpg" alt="佐合井マリ子"></div>
+        <h3>佐合井マリ子</h3>
+        <div class="perf-days">10/17（土）15:00〜</div>
+        <p>滋賀県出身のシンガーソングライター。澄んだ伸びやかな歌声と心に寄り添うピアノの音色で、情感豊かな物語を届けます。</p>
+      </div>
+
+      <div class="perf-card" id="parco-honico">
+        <div class="perf-photo"><img src="images/parco-honico.jpg" alt="サークルPARCO＆honico"></div>
+        <h3>サークルPARCO＆honico</h3>
+        <div class="perf-days">10/18（日）11:30〜</div>
+        <p>ハワイの伝統文化を愛するフラサークル。穏やかなハワイアンミュージックにのせ、優雅で温もりあふれる癒やしの踊りを披露します。</p>
+      </div>
+
+      <div class="perf-card" id="teora-hani-tahiti">
+        <div class="perf-photo"><img src="images/teora-hani-tahiti.jpg" alt="テオラハニタヒチ"></div>
+        <h3>テオラハニタヒチ</h3>
+        <div class="perf-days">10/18（日）12:00〜</div>
+        <p>大阪を拠点とするタヒチアンダンススクール。躍動感あふれるステップとしなやかな表現力で、本場タヒチの熱気と魅力を伝えます。</p>
+      </div>
+
+      <div class="perf-card" id="kuma-to-usagi">
+        <div class="perf-photo"><img src="images/kuma-to-usagi.jpg" alt="くまとうさぎ"></div>
+        <h3>くまとうさぎ</h3>
+        <div class="perf-days">10/18（日）13:00〜</div>
+        <p>米澤勇気と三木智史の実力派ボーカルユニット。昭和歌謡から童謡まで200曲超の幅広い楽曲と、経験豊かな演出力で、全世代を笑顔に巻き込みます。</p>
+      </div>
+
+      <div class="perf-card" id="rubino">
+        <div class="perf-photo"><img src="images/rubino.jpg" alt="Rubino"></div>
+        <h3>Rubino</h3>
+        <div class="perf-days">10/18（日）14:00〜</div>
+        <p>プロピアニストとオペラ歌手による本格派ユニット。華やかで力強い歌声と繊細なピアノの調べが織りなす極上のハーモニーを響かせます。</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <h2>秋の感謝祭×ハロウィンイベント</h2>
+    <p class="addr">オアシスタウン吹田SST「SST公園」<br>大阪府吹田市岸部中5-1-1<br>10/17（土）・18（日）10:00〜16:00　雨天中止</p>
+    <a class="btn" href="https://maps.app.goo.gl/5A4ka39Bmah164q2A" target="_blank" rel="noopener">会場までのマップを見る</a>
+    <p class="fine">© オアシスタウン吹田SST</p>
+  </div>
+</footer>
+
+</body>
+</html>
